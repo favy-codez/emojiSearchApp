@@ -1,5 +1,4 @@
 import './App.css';
-import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import Table from "./components/Table"
 import { useEffect, useState } from 'react';
@@ -28,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+     <h1 className='emojiheader'>Emoji Search</h1>
       <SearchBar setSearchWord={setSearchWord}/>
       {emojis.length !== 0 ? <Table emojis={emojis} searchWord={searchWord}/> : <img className='loader' src={LoadingGif}/> }
     </div>
